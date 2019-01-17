@@ -7,7 +7,7 @@ namespace DataStructure
 {
     using System;
     using System.Collections;
-    
+
 
     /// <summary>
     /// this class is used for writing the logics
@@ -105,6 +105,81 @@ namespace DataStructure
             string customeraName = Console.ReadLine();
             queue.Enqueue(customeraName);
         }
-        public void 
+        public void ViewCustomer()
+        {
+            if (queue.Count != 0)
+            {
+                Console.Write("the  customers in a quequ are: ");
+                foreach (string customers in queue)
+                {
+                    Console.WriteLine(customers);
+                }
+            }
+            else
+            {
+                Console.WriteLine("no customers in the quequ");
+            }
+        }
+
+        int amountInBank = 10000;
+        public void PerformTransactions()
+        {
+            if (queue.Count != 0)
+            {
+                Console.WriteLine(queue.Dequeue() + " continue your transaction");
+                Console.WriteLine("enter 1 for debit");
+                Console.WriteLine("enter 2 for withdraw");
+                int option = GetInt();
+                switch (option)
+                {
+                    case 1:
+                        Console.WriteLine("enter amount to deposite");
+                        int depositeRupess = GetInt();
+                        if (depositeRupess > 0)
+                        {
+                            amountInBank = amountInBank + depositeRupess;
+                            Console.WriteLine("amount deposited " + depositeRupess);
+                        }
+                        else
+                        {
+                            Console.WriteLine("entered invalid amount");
+                        }
+                        break;
+                    case 2:
+                        Console.WriteLine("enter amount to withdraw");
+                        int withdrawRupess = GetInt();
+                        if (withdrawRupess > 0)
+                        {
+                            if (withdrawRupess > amountInBank)
+                            {
+                                Console.WriteLine("no cash");
+                                if (amountInBank > 0)
+                                {
+                                    Console.WriteLine("enter amount less than " + amountInBank);
+                                }
+                            }
+                            else
+                            {
+                                amountInBank = amountInBank - withdrawRupess;
+                                Console.WriteLine("amount withdrawed " + withdrawRupess);
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("entered invalid amount");
+                        }
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("no customers in the quequ");
+            }
+        }
+
+        public void ViewBalance()
+        {
+            Console.WriteLine("balance with bank " + amountInBank);
+        }
     }
 }

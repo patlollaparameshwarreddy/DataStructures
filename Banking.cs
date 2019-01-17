@@ -12,73 +12,38 @@ namespace DataStructure
         public void BankingCashCounter()
         {
             Utility utility = new Utility();
-            Queue queue = new Queue();
-            int amountInBank = 10000;
-
-            Console.WriteLine("enter number of people to add in to bank");
-            int numberOfPeople = utility.GetInt();
-            Console.WriteLine("enter names");
-            for (int i = 0; i < numberOfPeople; i++)
+            do
             {
-                string name = Console.ReadLine();
-                queue.Enqueue(name);
-            }
-            
-            for (int i = 0; i < numberOfPeople; i++)
-            {
-                char startAndStopCondition = 'y';
-                string CustomerName = (string)queue.Dequeue();
-                do
+                Console.WriteLine("1. Add customer");
+                Console.WriteLine("2. View Customers");
+                Console.WriteLine("3. perform transaction");
+                Console.WriteLine("4. view balance in bank");
+                Console.Write("enter your choise: ");
+                int option = utility.GetInt();
+                switch (option)
                 {
-                    Console.WriteLine(CustomerName + " select your option");
-                    Console.WriteLine("enter 1 for deposit");
-                    Console.WriteLine("enter 2 for withdraw");
-                    int option = utility.GetInt();
-                    switch (option)
-                    {
-                        case 1:
-                            Console.WriteLine("enter amount to deposite");
-                            int depositeRupess = utility.GetInt();
-                            if (depositeRupess > 0)
-                            {
-                                amountInBank = amountInBank + depositeRupess;
-                                Console.WriteLine("amount deposited " + depositeRupess);
-                            }
-                            else
-                            {
-                                Console.WriteLine("entered invalid amount");
-                            }
+                    case 1:
+                        utility.AddCustomer();
+                        break;
+                    case 2:
+                        utility.ViewCustomer();
+                        break;
+                    case 3:
+                        utility.PerformTransactions();
+                        break;
+                    case 4:
+                        utility.ViewBalance();
+                        break;
+                    default:
+                        {
+                            Console.WriteLine("enter valid option");
                             break;
-                        case 2:
-                            Console.WriteLine("enter amount to withdraw");
-                            int withdrawRupess = utility.GetInt();
-                            if (withdrawRupess > 0)
-                            {
-                                if (withdrawRupess > amountInBank)
-                                {
-                                    Console.WriteLine("no cash");
-                                    Console.WriteLine("enter amount less than " + amountInBank);
-                                }
-                                else
-                                {
-                                    amountInBank = amountInBank - withdrawRupess;
-                                    Console.WriteLine("amount withdrawed " + withdrawRupess);
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine("entered invalid amount");
-                            }
-                            break;
-                         }
-                    Console.WriteLine(CustomerName + " do you want to continue");
-                    Console.WriteLine("enter y to continue");
-                    Console.WriteLine("enter any key to stop");
-                    startAndStopCondition = Convert.ToChar(Console.ReadLine());
+                        }
+
                 }
-                while (startAndStopCondition == 'y');
-          
+
             }
+            while (true);
         }
     }
 }
