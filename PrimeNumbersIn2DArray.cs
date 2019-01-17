@@ -1,53 +1,84 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="PrimeNumbersIn2DArray.cs" company="CompanyName">
+//     Company copyright tag.
+// </copyright>
+//----------------------------------------------------------------------
 namespace DataStructure
 {
-    class PrimeNumbersIn2DArray
+    using System;
+    using System.Collections;
+
+    /// <summary>
+    /// this class is used to store the prime numbers in 2d array
+    /// </summary>
+    public class PrimeNumbersIn2DArray
     {
+        /// <summary>
+        /// this method is used for getting the prime numbers and storing in 2d array
+        /// </summary>
         public void PrimeNumbers()
         {
-
+            ////creating the object of utility class
             Utility utility = new Utility();
+            ////getting the prime numbers list from the utility class
             ArrayList primeNumbers = utility.ListOfPrimeNumbers();
-            int p = 0;
-            int number1 = 0;
-            int number2 = 100;
-            if (number2 < 1000)
+            ////declaring the 2d array
+            int[,] primeNumbersInArray = new int[10, 25];
+            ////this variable is used for storing the index value of the arraylist
+            int startingIndexOfArrayList = 0;
+            ////this is the lower range number i.e 0
+            int range1 = 0;
+            ////this is the higer range number i.e 100
+            int range2 = 100;
+            ////this loop is used for taking the number of rows
+            for (int i = 0; i < 10; i++)
             {
-                for (int i = 1; i <= 10; i++)
+                ////this loop is used for taking the number of columns
+                for (int j = 0; j <= 25; j++)
                 {
-                    for (int j = 0; j <= 25; j++)
+                    try
                     {
-                        try
+                        ////this condition is used to check the checking the number in between the given range
+                        if (((int)primeNumbers[startingIndexOfArrayList] > range1) && ((int)primeNumbers[startingIndexOfArrayList] < range2))
                         {
-                            if (((int)primeNumbers[p] > number1) && ((int)primeNumbers[p] < number2))
-                            {
-                                Console.Write(primeNumbers[p] + "\t");
-                                p++;
-                            }
+                            primeNumbersInArray[i, j] = (int)primeNumbers[startingIndexOfArrayList];
+                            startingIndexOfArrayList++;
                         }
-                        catch (Exception e)
+                        else
                         {
-                            Console.WriteLine(e.Message);
+                            primeNumbersInArray[i, j] = '-';
                         }
                     }
-                    Console.WriteLine();
-                    number1 = number1 + 100;
-                    number2 = number2 + 100;
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
                 }
-            }
-            else
-            {
-                Console.WriteLine("printed all prime numbers");
-            }
-            Console.WriteLine(p + "value");
-            
 
+                ////incrementing the ranges by 100
+                range1 = range1 + 100;
+                range2 = range2 + 100;
+            }
+
+            ////this condition is used for printing the 2d array that contain prime numbers
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j <= 25; j++)
+                {
+                    try
+                    {
+                        Console.Write(primeNumbersInArray[i, j] + "\t");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    } 
+                }
+
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
         }
     }
 }

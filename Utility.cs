@@ -8,12 +8,16 @@ namespace DataStructure
     using System;
     using System.Collections;
 
-
     /// <summary>
     /// this class is used for writing the logics
     /// </summary>
     public class Utility
     {
+        /// <summary>
+        /// The queue object is created
+        /// </summary>
+        public Queue queue = new Queue();
+
         /// <summary>
         /// Files for taking input of unordered list.
         /// </summary>
@@ -54,25 +58,39 @@ namespace DataStructure
             return path;
         }
 
+        /// <summary>
+        /// Days the of week.
+        /// </summary>
+        /// <param name="year">The year</param>
+        /// <param name="month">The month</param>
+        /// <returns> return the day </returns>
         public int DayOfWeek(int year, int month)
         {
             string[] week = { "Sunday", "monday", "tuesday", "wednesday", "thrusday", "friday", "saturday" };
             int y = year;
             int m = month;
             int d = 1;
-            int y0 = y - (14 - m) / 12;
-            int x = y0 + (y0 / 4) - (y0 / 100) + (y0 / 400);
+            int y0 = (y - (14 - m)) / 12;
+            int x = y0 + ((y0 / 4) - (y0 / 100)) + (y0 / 400);
             int m0 = m + (12 * ((14 - m) / 12)) - 2;
-            int d0 = (d + x + (31 * m0) / 12) % 7;
+            int d0 = ((d + x + (31 * m0)) / 12) % 7;
             return d0;
         }
+
+        /// <summary>
+        /// Gets the integer.
+        /// </summary>
+        /// <returns>returns the integer value</returns>
         public int GetInt()
         {
             int number = Convert.ToInt32(Console.ReadLine());
             return number;
         }
 
-
+        /// <summary>
+        /// Lists the of prime numbers.
+        /// </summary>
+        /// <returns> returns the prime numbers </returns>
         public ArrayList ListOfPrimeNumbers()
         {
             ArrayList storePrimeNumbers = new ArrayList();
@@ -98,19 +116,27 @@ namespace DataStructure
             return storePrimeNumbers;
         }
 
-        Queue queue = new Queue();
+        /// <summary>
+        /// Adds the customer.
+        /// </summary>
         public void AddCustomer()
         {
             Console.WriteLine("enter customer name");
             string customeraName = Console.ReadLine();
-            queue.Enqueue(customeraName);
+            this.queue.Enqueue(customeraName);
         }
+
+        /// <summary>
+        /// Views the customer.
+        /// </summary>
         public void ViewCustomer()
         {
-            if (queue.Count != 0)
+            ////this condition is used to check whether the queue is empty or not
+            if (this.queue.Count != 0)
             {
-                Console.Write("the  customers in a quequ are: ");
-                foreach (string customers in queue)
+                Console.WriteLine("the  customers in a quequ are: ");
+                ////this loop is used for printing the values in the quequ
+                foreach (string customers in this.queue)
                 {
                     Console.WriteLine(customers);
                 }
@@ -121,46 +147,60 @@ namespace DataStructure
             }
         }
 
-        int amountInBank = 10000;
+        /// <summary>
+        /// The amount in bank
+        /// </summary>
+        private int amountInBank = 10000;
+
+        /// <summary>
+        /// Performs the transactions.
+        /// </summary>
         public void PerformTransactions()
         {
-            if (queue.Count != 0)
+            ////this condition is used to check whether the queue is empty or not
+            if (this.queue.Count != 0)
             {
-                Console.WriteLine(queue.Dequeue() + " continue your transaction");
-                Console.WriteLine("enter 1 for debit");
+                Console.WriteLine(this.queue.Dequeue() + " continue your transaction");
+                Console.WriteLine("enter 1 for credit");
                 Console.WriteLine("enter 2 for withdraw");
-                int option = GetInt();
+                ////this variable is used to store the choise of the customer
+                int option = this.GetInt();
                 switch (option)
                 {
                     case 1:
                         Console.WriteLine("enter amount to deposite");
-                        int depositeRupess = GetInt();
+                        int depositeRupess = this.GetInt();
+                        ////this condition is used to whether the depoit money is greater than zero
                         if (depositeRupess > 0)
                         {
-                            amountInBank = amountInBank + depositeRupess;
+                            this.amountInBank = this.amountInBank + depositeRupess;
                             Console.WriteLine("amount deposited " + depositeRupess);
                         }
                         else
                         {
                             Console.WriteLine("entered invalid amount");
                         }
+
                         break;
                     case 2:
                         Console.WriteLine("enter amount to withdraw");
-                        int withdrawRupess = GetInt();
+                        int withdrawRupess = this.GetInt();
+                        ////this condition is used to whether the depoit money is greater than zero
                         if (withdrawRupess > 0)
                         {
-                            if (withdrawRupess > amountInBank)
+                            ////this condition is used to check whether the withdrawRupess is greater than amountInBank
+                            if (withdrawRupess > this.amountInBank)
                             {
                                 Console.WriteLine("no cash");
-                                if (amountInBank > 0)
+                                ////this condition is uesd to check whether the bank consists of money or not
+                                if (this.amountInBank > 0)
                                 {
-                                    Console.WriteLine("enter amount less than " + amountInBank);
+                                    Console.WriteLine("enter amount less than " + this.amountInBank);
                                 }
                             }
                             else
                             {
-                                amountInBank = amountInBank - withdrawRupess;
+                                this.amountInBank = this.amountInBank - withdrawRupess;
                                 Console.WriteLine("amount withdrawed " + withdrawRupess);
                             }
                         }
@@ -168,6 +208,7 @@ namespace DataStructure
                         {
                             Console.WriteLine("entered invalid amount");
                         }
+
                         break;
                 }
             }
@@ -177,9 +218,12 @@ namespace DataStructure
             }
         }
 
+        /// <summary>
+        /// Views the balance.
+        /// </summary>
         public void ViewBalance()
         {
-            Console.WriteLine("balance with bank " + amountInBank);
+            Console.WriteLine("balance with bank " + this.amountInBank);
         }
     }
 }

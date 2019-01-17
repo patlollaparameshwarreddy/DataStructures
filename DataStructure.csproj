@@ -48,10 +48,13 @@
     <Compile Include="Calendar.cs" />
     <Compile Include="MainClass.cs" />
     <Compile Include="OrderedList.cs" />
+    <Compile Include="PalindromeChecker.cs" />
     <Compile Include="PrimeNumbersIn2DArray.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnOrderedList.cs" />
-    <Compile Include="Utility.cs" />
+    <Compile Include="Utility.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

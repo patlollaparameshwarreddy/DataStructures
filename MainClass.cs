@@ -28,6 +28,7 @@ namespace DataStructure
                 Console.WriteLine("enter 4 for printing calander");
                 Console.WriteLine("enter 5 for banking cash counter");
                 Console.WriteLine("enter 6 for prime numbers in 2D array");
+                Console.WriteLine("enter 7 for checking palindrome of a string");
                 try
                 {
                     caseConodition = Convert.ToInt32(Console.ReadLine());
@@ -62,6 +63,10 @@ namespace DataStructure
                     case 6:
                         PrimeNumbersIn2DArray primeNumbersIn2D = new PrimeNumbersIn2DArray();
                         primeNumbersIn2D.PrimeNumbers();
+                        break;
+                    case 7:
+                        PalindromeChecker palindromeChecker = new PalindromeChecker();
+                        palindromeChecker.CheckingPalindrome();
                         break;
                 }
 

@@ -19,9 +19,9 @@ namespace DataStructure
             string[] months = { "", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
             int[] days = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
             int StartDate = utility.DayOfWeek(year, month);
-            if ((month == 2) && (year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))
+            if ((month == 2) && (year % 4 == 0))
             {
-                days[1] = 29;
+                days[2] = 29;
             }
             int date = 01;
             for (int i = StartDate; i < calander.GetLength(1); i++)
@@ -45,23 +45,30 @@ namespace DataStructure
             }
 
             Console.WriteLine(months[month] + " " + year);
-            Console.WriteLine("sun mon tue wed thr fri sat  ");
+            Console.WriteLine("sun \tmon \ttue \twed \tthr \tfri \tsat");
             for (int i = 0; i < calander.GetLength(1); i++)
             {
-                Console.Write(" " + calander[0, i] + "  ");
+                if (calander[0, i] > 0)
+                {
+                    Console.Write(calander[0, i] + "\t");
+                }
+                else
+                {
+                    Console.Write(" " + "\t");
+                }
             }
             Console.WriteLine();
             for (int i = 1; i < calander.GetLength(0); i++)
             {
                 for (int j = 0; j < calander.GetLength(1); j++)
                 {
-                    if (calander[i, j] <= 9)
+                    if (calander[i, j] > 0)
                     {
-                        Console.Write(" " + calander[i, j] + "  ");
+                        Console.Write(calander[i, j] + "\t");
                     }
                     else
                     {
-                        Console.Write(calander[i, j] + "  ");
+                        Console.Write(" " + "\t");
                     }
                 }
                 Console.WriteLine();
