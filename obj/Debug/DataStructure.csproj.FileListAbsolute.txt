@@ -1,0 +1,7 @@
+C:\Users\Admin\Desktop\fellowship\functional\fellowship\DataStructure\DataStructure\obj\Debug\DataStructure.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\fellowship\functional\fellowship\DataStructure\DataStructure\obj\Debug\DataStructure.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\fellowship\functional\fellowship\DataStructure\DataStructure\bin\Debug\DataStructure.exe.config
+C:\Users\Admin\Desktop\fellowship\functional\fellowship\DataStructure\DataStructure\bin\Debug\DataStructure.exe
+C:\Users\Admin\Desktop\fellowship\functional\fellowship\DataStructure\DataStructure\bin\Debug\DataStructure.pdb
+C:\Users\Admin\Desktop\fellowship\functional\fellowship\DataStructure\DataStructure\obj\Debug\DataStructure.exe
+C:\Users\Admin\Desktop\fellowship\functional\fellowship\DataStructure\DataStructure\obj\Debug\DataStructure.pdb
