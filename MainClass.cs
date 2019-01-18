@@ -29,6 +29,8 @@ namespace DataStructure
                 Console.WriteLine("enter 5 for banking cash counter");
                 Console.WriteLine("enter 6 for prime numbers in 2D array");
                 Console.WriteLine("enter 7 for checking palindrome of a string");
+                Console.WriteLine("enter 8 for binary search tree");
+                Console.WriteLine("enter 9 for binary numbers in a stack");
                 try
                 {
                     caseConodition = Convert.ToInt32(Console.ReadLine());
@@ -68,6 +70,15 @@ namespace DataStructure
                         PalindromeChecker palindromeChecker = new PalindromeChecker();
                         palindromeChecker.CheckingPalindrome();
                         break;
+                    case 8:
+                        BinarySearchTree binarySearchTree = new BinarySearchTree();
+                        binarySearchTree.NumberOfBinarySearchTrees();
+                        break;
+                    case 9:
+                        AddingPrimeNumbersAnagramInAStack anagramInAStack = new AddingPrimeNumbersAnagramInAStack();
+                        anagramInAStack.PrimeNumbersAnagramInAStack();
+                        break;
+                   
                 }
 
                 Console.WriteLine("enter y to continue,  enter any key to stop execution");

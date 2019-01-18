@@ -34,7 +34,7 @@ namespace DataStructure
             for (int i = 0; i < 10; i++)
             {
                 ////this loop is used for taking the number of columns
-                for (int j = 0; j <= 25; j++)
+                for (int j = 0; j <= primeNumbersInArray.GetLength(1); j++)
                 {
                     try
                     {
@@ -63,7 +63,7 @@ namespace DataStructure
             ////this condition is used for printing the 2d array that contain prime numbers
             for (int i = 0; i < 10; i++)
             {
-                for (int j = 0; j <= 25; j++)
+                for (int j = 0; j <= primeNumbersInArray.GetLength(1); j++)
                 {
                     try
                     {

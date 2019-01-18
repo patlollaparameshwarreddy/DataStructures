@@ -225,5 +225,21 @@ namespace DataStructure
         {
             Console.WriteLine("balance with bank " + this.amountInBank);
         }
+
+        public long NumberOfBTSwithNnodes(long nodes)
+        {
+            long numberOfBTS = FactorialOfANumber(2 * nodes) / (FactorialOfANumber(nodes + 1) * FactorialOfANumber(nodes));
+            return numberOfBTS;
+        }
+        public long FactorialOfANumber(long number)
+        {
+            long result = 1;
+            for (int i =1; i <= number; i++)
+            {
+                result = result * i;
+            }
+            return result;
+           
+        }
     }
 }

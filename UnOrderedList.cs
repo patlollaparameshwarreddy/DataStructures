@@ -47,7 +47,6 @@ namespace DataStructure
             ////the variable is used to stor the search element given by the user
             string searchWord = Console.ReadLine();
             ////this condition is used to check whether the given word is present in the list are not
-            
             if (Regex.IsMatch(searchWord.Replace(" ", string.Empty), @"^[a-zA-Z]+$"))
             {
                 if (linkedList.Contains(searchWord))

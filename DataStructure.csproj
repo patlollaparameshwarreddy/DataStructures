@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddingPrimeNumbersAnagramInAStack.cs" />
     <Compile Include="BalancedParentheses.cs" />
     <Compile Include="Banking.cs" />
+    <Compile Include="BinarySearchTree.cs" />
     <Compile Include="Calendar.cs" />
     <Compile Include="MainClass.cs" />
     <Compile Include="OrderedList.cs" />

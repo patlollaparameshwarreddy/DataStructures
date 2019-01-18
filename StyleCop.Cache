@@ -130,9 +130,6 @@
       </violation>
     </violations>
   </sourcecode>
-  <project key="1492837342">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
   <sourcecode name="BalancedParentheses.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2019-01-07 10:55:27.391</styleCop>
@@ -514,5 +511,43 @@
       <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
     </timestamps>
     <violations />
+  </sourcecode>
+  <project key="1492837342">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
+  <sourcecode name="BinarySearchTree.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2019-01-07 10:55:27.391</styleCop>
+      <settingsFile>2019-01-16 11:33:49.239</settingsFile>
+      <sourceFile>2019-01-18 12:36:00.441</sourceFile>
+      <parser>2019-01-07 10:55:27.391</parser>
+      <StyleCop.CSharp.DocumentationRules>2019-01-07 10:55:27.391</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>1786968637</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2019-01-07 10:55:27.391</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2019-01-07 10:55:27.391</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2019-01-07 10:55:27.391</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2019-01-07 10:55:27.391</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2019-01-07 10:55:27.391</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2019-01-07 10:55:27.391</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="KeywordsMustBeSpacedCorrectly" ruleCheckId="SA1000">
+        <context>The spacing around the keyword 'catch' is invalid.</context>
+        <line>29</line>
+        <index>1003</index>
+        <endIndex>1007</endIndex>
+        <startLine>29</startLine>
+        <startColumn>13</startColumn>
+        <endLine>29</endLine>
+        <endColumn>17</endColumn>
+        <warning>False</warning>
+      </violation>
+    </violations>
   </sourcecode>
 </stylecopresultscache>
