@@ -36,23 +36,18 @@ namespace DataStructure
                 ////this loop is used for taking the number of columns
                 for (int j = 0; j <= primeNumbersInArray.GetLength(1); j++)
                 {
-                    try
-                    {
-                        ////this condition is used to check the checking the number in between the given range
-                        if (((int)primeNumbers[startingIndexOfArrayList] > range1) && ((int)primeNumbers[startingIndexOfArrayList] < range2))
+                     try
+                     {
+                        if (startingIndexOfArrayList < primeNumbers.Count && ((int)primeNumbers[startingIndexOfArrayList] > range1) && ((int)primeNumbers[startingIndexOfArrayList] <= range2))
                         {
                             primeNumbersInArray[i, j] = (int)primeNumbers[startingIndexOfArrayList];
                             startingIndexOfArrayList++;
-                        }
-                        else
-                        {
-                            primeNumbersInArray[i, j] = '-';
                         }
                     }
                     catch (Exception e)
                     {
                         Console.WriteLine(e.Message);
-                    }
+                   }
                 }
 
                 ////incrementing the ranges by 100
@@ -63,11 +58,19 @@ namespace DataStructure
             ////this condition is used for printing the 2d array that contain prime numbers
             for (int i = 0; i < 10; i++)
             {
-                for (int j = 0; j <= primeNumbersInArray.GetLength(1); j++)
+                for (int j = 0; j < primeNumbersInArray.GetLength(1); j++)
                 {
                     try
                     {
-                        Console.Write(primeNumbersInArray[i, j] + "\t");
+                        ////this condition is used for not printing the default value 0 insted of it will print space
+                        if (primeNumbersInArray[i, j] > 0)
+                        {
+                            Console.Write(primeNumbersInArray[i, j] + "\t");
+                        }
+                        else
+                        {
+                            Console.Write(' ');
+                        }
                     }
                     catch (Exception e)
                     {

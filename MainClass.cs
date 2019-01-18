@@ -31,6 +31,8 @@ namespace DataStructure
                 Console.WriteLine("enter 7 for checking palindrome of a string");
                 Console.WriteLine("enter 8 for binary search tree");
                 Console.WriteLine("enter 9 for binary numbers in a stack");
+                Console.WriteLine("enter 10 for binary numbers in a queue");
+                Console.WriteLine("enter 11 for calander using quequ");
                 try
                 {
                     caseConodition = Convert.ToInt32(Console.ReadLine());
@@ -78,7 +80,14 @@ namespace DataStructure
                         AddingPrimeNumbersAnagramInAStack anagramInAStack = new AddingPrimeNumbersAnagramInAStack();
                         anagramInAStack.PrimeNumbersAnagramInAStack();
                         break;
-                   
+                    case 10:
+                        AddingAnagramPrimeInQueue anagramPrimeInQueue = new AddingAnagramPrimeInQueue();
+                        anagramPrimeInQueue.AnagramPrimeNumber();
+                        break;
+                    case 11:
+                        CalanderThroughQueue calanderThroughQueue = new CalanderThroughQueue();
+                        calanderThroughQueue.CalanderInQueue();
+                        break;
                 }
 
                 Console.WriteLine("enter y to continue,  enter any key to stop execution");
