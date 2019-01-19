@@ -51,7 +51,7 @@ namespace DataStructure
             }
             catch (Exception)
             {
-                Console.WriteLine("arithematic expression should not start with closed brackets, enter proper arithematic expression ");
+                Console.WriteLine("invalid arithematic expression");
                 this.CheckingBalancedParentheses();
             }
         }

@@ -21,8 +21,9 @@ namespace DataStructure
             ////creating queue object
             Queue firstQueue = new Queue();
             Queue secondQueue = new Queue();
-            Console.WriteLine("enter string for checking for palindrome");
-            ////taking string from the console
+            Console.WriteLine("enter values for checking for palindrome");
+            ////taking values
+            ////from the console
             string word = Console.ReadLine();
             int condition = 0;
             ////converting the string in to character array

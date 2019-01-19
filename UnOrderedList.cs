@@ -78,6 +78,7 @@ namespace DataStructure
                 streamWriter.WriteLine(resultString + " ");
             }
 
+            Console.WriteLine("press enter to continue");
             Console.ReadLine();
         }
     }

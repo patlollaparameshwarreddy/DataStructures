@@ -18,7 +18,22 @@ namespace DataStructure
         /// <param name="args">The arguments.</param>
         public static void Main(string[] args)
         {
-            char condition;
+            try
+            {
+                MainClass.Menu();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                
+            }
+        }
+
+        /// <summary>
+        /// this method is used for creating the object of all classes
+        /// </summary>
+        public static void Menu()
+        {
+            string condition;
             int caseConodition = 0;
             do
             {
@@ -30,19 +45,11 @@ namespace DataStructure
                 Console.WriteLine("enter 6 for prime numbers in 2D array");
                 Console.WriteLine("enter 7 for checking palindrome of a string");
                 Console.WriteLine("enter 8 for binary search tree");
-                Console.WriteLine("enter 9 for binary numbers in a stack");
-                Console.WriteLine("enter 10 for binary numbers in a queue");
+                Console.WriteLine("enter 9 for anagrams of prime numbers in a stack");
+                Console.WriteLine("enter 10 for anagrams of prime numbers in a queue");
                 Console.WriteLine("enter 11 for calander using quequ");
                 Console.WriteLine("enter 12 for calander through stack");
-                try
-                {
-                    caseConodition = Convert.ToInt32(Console.ReadLine());
-                }
-                catch (System.FormatException e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-
+                caseConodition = Convert.ToInt32(Console.ReadLine());
                 switch (caseConodition)
                 {
                     case 1:
@@ -95,10 +102,11 @@ namespace DataStructure
                         break;
                 }
 
-                Console.WriteLine("enter y to continue,  enter any key to stop execution");
-                condition = Convert.ToChar(Console.ReadLine());
+                Console.WriteLine("Enter Y to continue OR any key to stop");
+
+                condition = Console.ReadLine();
             }
-            while (condition == 'y');
+            while (condition.Equals("y") || condition.Equals("Y"));
         }
-    }
+    }            
 }
