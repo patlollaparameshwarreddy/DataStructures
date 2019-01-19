@@ -50,6 +50,7 @@
     <Compile Include="BinarySearchTree.cs" />
     <Compile Include="CalanderThroughQueue.cs" />
     <Compile Include="Calendar.cs" />
+    <Compile Include="CalendarThroughStack.cs" />
     <Compile Include="MainClass.cs" />
     <Compile Include="OrderedList.cs" />
     <Compile Include="PalindromeChecker.cs" />
@@ -57,7 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnOrderedList.cs" />
     <Compile Include="Utility.cs">
-      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
     </Compile>
   </ItemGroup>
   <ItemGroup>

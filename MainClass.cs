@@ -33,6 +33,7 @@ namespace DataStructure
                 Console.WriteLine("enter 9 for binary numbers in a stack");
                 Console.WriteLine("enter 10 for binary numbers in a queue");
                 Console.WriteLine("enter 11 for calander using quequ");
+                Console.WriteLine("enter 12 for calander through stack");
                 try
                 {
                     caseConodition = Convert.ToInt32(Console.ReadLine());
@@ -58,7 +59,7 @@ namespace DataStructure
                         break;
                     case 4:
                         Calendar calendar = new Calendar();
-                        calendar.FormationCalanderBasedOnYearAndMonth();
+                        calendar.FormationCalendarBasedOnYearAndMonth();
                         break;
                     case 5:
                         Banking banking = new Banking();
@@ -87,6 +88,10 @@ namespace DataStructure
                     case 11:
                         CalanderThroughQueue calanderThroughQueue = new CalanderThroughQueue();
                         calanderThroughQueue.CalanderInQueue();
+                        break;
+                    case 12:
+                        CalendarThroughStack calendarThroughStack = new CalendarThroughStack();
+                        calendarThroughStack.ImplementingCalendarThroughStack();
                         break;
                 }
 

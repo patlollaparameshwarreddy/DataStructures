@@ -10,7 +10,7 @@ namespace DataStructure
     /// <summary>
     /// this class is used for maintaining details of a bank
     /// </summary>
-    class Banking
+    public class Banking
     {
         /// <summary>
         /// Banking the cash counter.
@@ -50,9 +50,7 @@ namespace DataStructure
                             Console.WriteLine("enter valid option");
                             break;
                         }
-
                 }
-
             }
             while (true);
         }

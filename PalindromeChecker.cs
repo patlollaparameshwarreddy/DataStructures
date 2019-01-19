@@ -11,7 +11,7 @@ namespace DataStructure
     /// <summary>
     /// this class is used for checking for palindrome
     /// </summary>
-    class PalindromeChecker
+    public class PalindromeChecker
     {
         /// <summary>
         /// Checking the palindrome.
@@ -35,7 +35,7 @@ namespace DataStructure
                 firstQueue.Enqueue(convertingWordsToCharacter[i]);
             }
             ////storing the charactes in reverse order to a second queue
-            for (int i = lengthOfCharArray - 1; i >= 0 ; i--)
+            for (int i = lengthOfCharArray - 1; i >= 0; i--)
             {
                 secondQueue.Enqueue(convertingWordsToCharacter[i]);
             }
@@ -59,7 +59,6 @@ namespace DataStructure
             {
                 Console.WriteLine("TRUE");
             }
-
         }
     }
 }

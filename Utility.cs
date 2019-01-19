@@ -70,10 +70,10 @@ namespace DataStructure
             int y = year;
             int m = month;
             int d = 1;
-            int y0 = y - (14 - m) / 12;
+            int y0 = y - ((14 - m) / 12);
             int x = y0 + (y0 / 4) - (y0 / 100) + (y0 / 400);
             int m0 = m + (12 * ((14 - m) / 12)) - 2;
-            int d0 = (d + x + (31 * m0) / 12) % 7;
+            int d0 = (d + x + (31 * m0 / 12)) % 7;
             return d0;
         }
 
@@ -233,7 +233,7 @@ namespace DataStructure
         /// <returns>returns the numbers of binary search tree </returns>
         public long NumberOfBTSwithNnodes(long nodes)
         {
-            long numberOfBTS = FactorialOfANumber(2 * nodes) / (FactorialOfANumber(nodes + 1) * FactorialOfANumber(nodes));
+            long numberOfBTS = this.FactorialOfANumber(2 * nodes) / (this.FactorialOfANumber(nodes + 1) * this.FactorialOfANumber(nodes));
             return numberOfBTS;
         }
 
@@ -241,16 +241,16 @@ namespace DataStructure
         /// Factorial of a number.
         /// </summary>
         /// <param name="number">The number.</param>
-        /// <returns>it returns the </returns>
+        /// <returns>it returns the factorial </returns>
         public long FactorialOfANumber(long number)
         {
             long result = 1;
-            for (int i =1; i <= number; i++)
+            for (int i = 1; i <= number; i++)
             {
                 result = result * i;
             }
+
             return result;
-           
         }
     }
 }
