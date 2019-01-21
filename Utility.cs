@@ -42,7 +42,7 @@ namespace DataStructure
         /// Files for taking input of ordered list.
         /// </summary>
         /// <returns>this will return the path of a folder</returns>
-        public string FileForOrderedList()
+        public string FileForTakingInputOfOrderedList()
         {
             string path = @"C:\Users\Admin\Desktop\OrderedList.txt";
             return path;
