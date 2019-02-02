@@ -49,6 +49,8 @@ namespace DataStructure
                 Console.WriteLine("enter 10 for anagrams of prime numbers in a queue");
                 Console.WriteLine("enter 11 for calander using quequ");
                 Console.WriteLine("enter 12 for calander through stack");
+                Console.WriteLine("enter 13 for Hashing Function");
+                Console.WriteLine("enter 14 for prime numbers that are not anagra and anagram");
                 caseConodition = Convert.ToInt32(Console.ReadLine());
                 switch (caseConodition)
                 {
@@ -99,6 +101,14 @@ namespace DataStructure
                     case 12:
                         CalendarThroughStack calendarThroughStack = new CalendarThroughStack();
                         calendarThroughStack.ImplementingCalendarThroughStack();
+                        break;
+                    case 13:
+                        HashingFunction hashing = new HashingFunction();
+                        hashing.StoringAndRetrievingNumbers();
+                        break;
+                    case 14:
+                        PrimeNumbersAndAnagrams primeNumbersAndAnagrams = new PrimeNumbersAndAnagrams();
+                        primeNumbersAndAnagrams.AnagramAndPrime();
                         break;
                 }
 

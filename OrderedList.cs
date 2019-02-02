@@ -26,9 +26,9 @@ namespace DataStructure
             ////System.IO.File.ReadAllText is used to read the elements from the file 
             string numbersInFile = System.IO.File.ReadAllText(utility.FileForTakingInputOfOrderedList());
             ////this string is used to split the string in to string array
-            string[] StringFormatenumbers = numbersInFile.Split(' ');
+            string[] stringFormatenumbers = numbersInFile.Split(' ');
             ////Array.ConvertAll this is used to convert string array in tointeger array
-            int[] StringToNumbers = Array.ConvertAll(StringFormatenumbers, int.Parse);
+            int[] StringToNumbers = Array.ConvertAll(stringFormatenumbers, int.Parse);
             ////this is used to sort an elements in an array
             Array.Sort(StringToNumbers);
             ////this loop is used to add elements in to an linked list
@@ -83,4 +83,3 @@ namespace DataStructure
         }
     }
 }
-

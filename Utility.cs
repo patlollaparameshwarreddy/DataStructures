@@ -16,7 +16,7 @@ namespace DataStructure
         /// <summary>
         /// The queue object is created
         /// </summary>
-        public Queue queue = new Queue();
+        private Queue queue = new Queue();
 
         /// <summary>
         /// Files for taking input of unordered list.
@@ -251,6 +251,16 @@ namespace DataStructure
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Hashing the function file.
+        /// </summary>
+        /// <returns> the path</returns>
+        public static string HashingFunctionFile()
+        {
+            string path = @"D:\Hashing Function File.txt";
+            return path;
         }
     }
 }
